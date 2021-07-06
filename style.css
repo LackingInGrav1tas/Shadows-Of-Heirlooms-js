@@ -1,0 +1,19 @@
+.main-screen {
+    background-color: black;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 0px;
+    height: fit-content;
+    color: white;
+    border-radius: 20px;
+}
+
+.main-body {
+    background-color: darkslategray;
+}
+
+.choice-text {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
