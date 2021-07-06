@@ -148,35 +148,41 @@ canvas_codes.c = function() {
                 document.getElementById('choice3').removeEventListener('mouseover', function() { loadImage('static/classes/bard.jpg'); });
                 document.getElementById('choice4').removeEventListener('mouseover', function() { loadImage('static/classes/assassin.jpg'); });
                 */
-                loadImage('static/1.jpg');
+                loadImage('static/1xx.jpg');
             };
 
             canvas_codes.c1x1 = function() {
                 // paladin
                 clear_classes();
+                game.player.class = 'paladin';
             };
 
             canvas_codes.c1x2 = function() {
                 // warlock
                 clear_classes();
+                game.player.class = 'warlock';
             };
 
             canvas_codes.c1x3 = function() {
                 // bard
                 clear_classes();
+                game.player.class = 'bard';
             };
 
             canvas_codes.c1x4 = function() {
                 // assassin
                 clear_classes();
+                game.player.class = 'assassin';
             };
 
             {
                 canvas_codes.c1xx1 = function() {
+                    // east
 
                 };
 
                 canvas_codes.c1xx2 = function() {
+                    // north
 
                 }
             }
