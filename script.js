@@ -45,29 +45,142 @@ class Game {
         // player info
         this.player = new Player();
 
-        // the entire game
+        let beginning_message = 'Besides the one you have just entered through, there are two doorways; one to the east, and one to the north. Which door do you enter?';
+        let EAST = new StoryFork('', 'East', canvas_codes.c1xx1, [
+
+        ]);
+        let NORTH = new StoryFork('', 'North', canvas_codes.c1xx2, [
+
+        ]);
+
+        // the game + setup
         this.current = new StoryFork('As you walk down the dark, musty hallway, a room intrigues you. You enter it.\nThick cobwebs fill the corners of the room, and wisps of webbing hang from the ceiling and waver in a wind you can barely feel. One corner of the ceiling has a particularly large clot of webbing within which a goblin\'s bones are tangled.', 'not needed b/c first', canvas_codes.c, [
             new StoryFork('There is a large mirror. In it you see:', 'Continue', canvas_codes.c1, [
-                new StoryFork('1', 'A Human', canvas_codes.c11, [
-                    
+                new StoryFork('A human who is:', 'A Human', canvas_codes.c11, [ // choosing classes
+                    new StoryFork(beginning_message, 'A Paladin', canvas_codes.c1x1, [
+                        EAST,
+                        NORTH
+                    ]),
+                    new StoryFork(beginning_message, 'A Warlock', canvas_codes.c1x2, [
+                        EAST,
+                        NORTH
+                    ]),
+                    new StoryFork(beginning_message, 'A Bard', canvas_codes.c1x3, [
+                        EAST,
+                        NORTH
+                    ]),
+                    new StoryFork(beginning_message, 'An Assassin', canvas_codes.c1x4, [
+                        EAST,
+                        NORTH
+                    ])
                 ]),
-                new StoryFork('2', 'An Elf', canvas_codes.c12, [
-                    
+                new StoryFork('An elf who is:', 'An Elf', canvas_codes.c12, [ // choosing classes
+                    new StoryFork(beginning_message, 'A Paladin', canvas_codes.c1x1, [
+                        EAST,
+                        NORTH
+                    ]),
+                    new StoryFork(beginning_message, 'A Warlock', canvas_codes.c1x2, [
+                        EAST,
+                        NORTH
+                    ]),
+                    new StoryFork(beginning_message, 'A Bard', canvas_codes.c1x3, [
+                        EAST,
+                        NORTH
+                    ]),
+                    new StoryFork(beginning_message, 'An Assassin', canvas_codes.c1x4, [
+                        EAST,
+                        NORTH
+                    ])
                 ]),
-                new StoryFork('3', 'An Orc', canvas_codes.c13, [
-                    
+                new StoryFork('An orc who is:', 'An Orc', canvas_codes.c13, [ // choosing classes
+                    new StoryFork(beginning_message, 'A Paladin', canvas_codes.c1x1, [
+                        EAST,
+                        NORTH
+                    ]),
+                    new StoryFork(beginning_message, 'A Warlock', canvas_codes.c1x2, [
+                        EAST,
+                        NORTH
+                    ]),
+                    new StoryFork(beginning_message, 'A Bard', canvas_codes.c1x3, [
+                        EAST,
+                        NORTH
+                    ]),
+                    new StoryFork(beginning_message, 'An Assassin', canvas_codes.c1x4, [
+                        EAST,
+                        NORTH
+                    ])
                 ]),
-                new StoryFork('4', 'A Tiefling', canvas_codes.c14, [
-                    
+                new StoryFork('A tiefling who is:', 'A Tiefling', canvas_codes.c14, [ // choosing classes
+                    new StoryFork(beginning_message, 'A Paladin', canvas_codes.c1x1, [
+                        EAST,
+                        NORTH
+                    ]),
+                    new StoryFork(beginning_message, 'A Warlock', canvas_codes.c1x2, [
+                        EAST,
+                        NORTH
+                    ]),
+                    new StoryFork(beginning_message, 'A Bard', canvas_codes.c1x3, [
+                        EAST,
+                        NORTH
+                    ]),
+                    new StoryFork(beginning_message, 'An Assassin', canvas_codes.c1x4, [
+                        EAST,
+                        NORTH
+                    ])
                 ]),
-                new StoryFork('5', 'A Halfling', canvas_codes.c15, [
-                    
+                new StoryFork('A halfling who is:', 'A Halfling', canvas_codes.c15, [ // choosing classes
+                    new StoryFork(beginning_message, 'A Paladin', canvas_codes.c1x1, [
+                        EAST,
+                        NORTH
+                    ]),
+                    new StoryFork(beginning_message, 'A Warlock', canvas_codes.c1x2, [
+                        EAST,
+                        NORTH
+                    ]),
+                    new StoryFork(beginning_message, 'A Bard', canvas_codes.c1x3, [
+                        EAST,
+                        NORTH
+                    ]),
+                    new StoryFork(beginning_message, 'An Assassin', canvas_codes.c1x4, [
+                        EAST,
+                        NORTH
+                    ])
                 ]),
-                new StoryFork('6', 'A Dwarf', canvas_codes.c16, [
-                    
+                new StoryFork('A dwarf who is:', 'A Dwarf', canvas_codes.c16, [ // choosing classes
+                    new StoryFork(beginning_message, 'A Paladin', canvas_codes.c1x1, [
+                        EAST,
+                        NORTH
+                    ]),
+                    new StoryFork(beginning_message, 'A Warlock', canvas_codes.c1x2, [
+                        EAST,
+                        NORTH
+                    ]),
+                    new StoryFork(beginning_message, 'A Bard', canvas_codes.c1x3, [
+                        EAST,
+                        NORTH
+                    ]),
+                    new StoryFork(beginning_message, 'An Assassin', canvas_codes.c1x4, [
+                        EAST,
+                        NORTH
+                    ])
                 ]),
-                new StoryFork('7', 'A Gnoll', canvas_codes.c17, [
-                    
+                new StoryFork('A gnoll who is:', 'A Gnoll', canvas_codes.c17, [
+                    new StoryFork(beginning_message, 'A Paladin', canvas_codes.c1x1, [
+                        EAST,
+                        NORTH
+                    ]),
+                    new StoryFork(beginning_message, 'A Warlock', canvas_codes.c1x2, [
+                        EAST,
+                        NORTH
+                    ]),
+                    new StoryFork(beginning_message, 'A Bard', canvas_codes.c1x3, [
+                        EAST,
+                        NORTH
+                    ]),
+                    new StoryFork(beginning_message, 'An Assassin', canvas_codes.c1x4, [
+                        EAST,
+                        NORTH
+                    ])
                 ]),
             ])
         ]);

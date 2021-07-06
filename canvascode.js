@@ -41,12 +41,11 @@ var mydragg = function(){
 }();
 
 var minimized = false;
-var sizing = [0, 0, ''];
+// var sizing = [0, 0, ''];
 
 function toggleWindow() {
-    window.alert('not working atm');
-    return;
-    let img = document.getElementById('image');
+    window.alert('unimplemented');
+    /*let img = document.getElementById('image');
     let elem = document.getElementById('draw-screen');
     minimized = !minimized;
     if (minimized) {
@@ -65,7 +64,7 @@ function toggleWindow() {
             elem.style.width = sizing[0];
             elem.style.height = sizing[1];
         }
-    }
+    }*/
 }
 
 function loadImage(image) {
@@ -90,81 +89,92 @@ canvas_codes.c = function() {
         document.getElementById('choice6').addEventListener('mouseover', function() { loadImage('static/races/dwarf.jpg'); }, false);
         document.getElementById('choice7').addEventListener('mouseover', function() { loadImage('static/races/gnoll.jpg'); }, false);
     }; {
+        let clear_races = function() {
+            document.getElementById('choice1').removeEventListener('mouseover', function() { loadImage('static/races/human.jpg'); });
+            document.getElementById('choice2').removeEventListener('mouseover', function() { loadImage('static/races/elf.jpg'); });
+            document.getElementById('choice3').removeEventListener('mouseover', function() { loadImage('static/races/orc.jpg'); });
+            document.getElementById('choice4').removeEventListener('mouseover', function() { loadImage('static/races/tiefling.jpg'); });
+            document.getElementById('choice5').removeEventListener('mouseover', function() { loadImage('static/races/halfling.jpg'); });
+            document.getElementById('choice6').removeEventListener('mouseover', function() { loadImage('static/races/dwarf.jpg'); });
+            document.getElementById('choice7').removeEventListener('mouseover', function() { loadImage('static/races/gnoll.jpg'); });
+        
+            document.getElementById('choice1').addEventListener('mouseover', function() { loadImage('static/classes/paladin.jpg'); }, false);
+            document.getElementById('choice2').addEventListener('mouseover', function() { loadImage('static/classes/warlock.jpg'); }, false);
+            document.getElementById('choice3').addEventListener('mouseover', function() { loadImage('static/classes/bard.jpg'); }, false);
+            document.getElementById('choice4').addEventListener('mouseover', function() { loadImage('static/classes/assassin.jpg'); }, false);
+        };
         canvas_codes.c11 = function() {
             // removing race option on hover
-            document.getElementById('choice1').addEventListener('mouseover', function() { loadImage('static/races/human.jpg'); }, false);
-            document.getElementById('choice2').addEventListener('mouseover', function() { loadImage('static/races/elf.jpg'); }, false);
-            document.getElementById('choice3').addEventListener('mouseover', function() { loadImage('static/races/orc.jpg'); }, false);
-            document.getElementById('choice4').addEventListener('mouseover', function() { loadImage('static/races/tiefling.jpg'); }, false);
-            document.getElementById('choice5').addEventListener('mouseover', function() { loadImage('static/races/halfling.jpg'); }, false);
-            document.getElementById('choice6').addEventListener('mouseover', function() { loadImage('static/races/dwarf.jpg'); }, false);
-            document.getElementById('choice7').addEventListener('mouseover', function() { loadImage('static/races/gnoll.jpg'); }, false);
-        }
+            clear_races();
+        };
 
         canvas_codes.c12 = function() {
             // removing race option on hover
-            document.getElementById('choice1').addEventListener('mouseover', function() { loadImage('static/races/human.jpg'); }, false);
-            document.getElementById('choice2').addEventListener('mouseover', function() { loadImage('static/races/elf.jpg'); }, false);
-            document.getElementById('choice3').addEventListener('mouseover', function() { loadImage('static/races/orc.jpg'); }, false);
-            document.getElementById('choice4').addEventListener('mouseover', function() { loadImage('static/races/tiefling.jpg'); }, false);
-            document.getElementById('choice5').addEventListener('mouseover', function() { loadImage('static/races/halfling.jpg'); }, false);
-            document.getElementById('choice6').addEventListener('mouseover', function() { loadImage('static/races/dwarf.jpg'); }, false);
-            document.getElementById('choice7').addEventListener('mouseover', function() { loadImage('static/races/gnoll.jpg'); }, false);
-        }
+            clear_races();
+        };
 
         canvas_codes.c13 = function() {
             // removing race option on hover
-            document.getElementById('choice1').addEventListener('mouseover', function() { loadImage('static/races/human.jpg'); }, false);
-            document.getElementById('choice2').addEventListener('mouseover', function() { loadImage('static/races/elf.jpg'); }, false);
-            document.getElementById('choice3').addEventListener('mouseover', function() { loadImage('static/races/orc.jpg'); }, false);
-            document.getElementById('choice4').addEventListener('mouseover', function() { loadImage('static/races/tiefling.jpg'); }, false);
-            document.getElementById('choice5').addEventListener('mouseover', function() { loadImage('static/races/halfling.jpg'); }, false);
-            document.getElementById('choice6').addEventListener('mouseover', function() { loadImage('static/races/dwarf.jpg'); }, false);
-            document.getElementById('choice7').addEventListener('mouseover', function() { loadImage('static/races/gnoll.jpg'); }, false);
-        }
+            clear_races();
+        };
 
         canvas_codes.c14 = function() {
             // removing race option on hover
-            document.getElementById('choice1').addEventListener('mouseover', function() { loadImage('static/races/human.jpg'); }, false);
-            document.getElementById('choice2').addEventListener('mouseover', function() { loadImage('static/races/elf.jpg'); }, false);
-            document.getElementById('choice3').addEventListener('mouseover', function() { loadImage('static/races/orc.jpg'); }, false);
-            document.getElementById('choice4').addEventListener('mouseover', function() { loadImage('static/races/tiefling.jpg'); }, false);
-            document.getElementById('choice5').addEventListener('mouseover', function() { loadImage('static/races/halfling.jpg'); }, false);
-            document.getElementById('choice6').addEventListener('mouseover', function() { loadImage('static/races/dwarf.jpg'); }, false);
-            document.getElementById('choice7').addEventListener('mouseover', function() { loadImage('static/races/gnoll.jpg'); }, false);
-        }
+            clear_races();
+        };
 
         canvas_codes.c15 = function() {
             // removing race option on hover
-            document.getElementById('choice1').addEventListener('mouseover', function() { loadImage('static/races/human.jpg'); }, false);
-            document.getElementById('choice2').addEventListener('mouseover', function() { loadImage('static/races/elf.jpg'); }, false);
-            document.getElementById('choice3').addEventListener('mouseover', function() { loadImage('static/races/orc.jpg'); }, false);
-            document.getElementById('choice4').addEventListener('mouseover', function() { loadImage('static/races/tiefling.jpg'); }, false);
-            document.getElementById('choice5').addEventListener('mouseover', function() { loadImage('static/races/halfling.jpg'); }, false);
-            document.getElementById('choice6').addEventListener('mouseover', function() { loadImage('static/races/dwarf.jpg'); }, false);
-            document.getElementById('choice7').addEventListener('mouseover', function() { loadImage('static/races/gnoll.jpg'); }, false);
-        }
+            clear_races();
+        };
 
         canvas_codes.c16 = function() {
             // removing race option on hover
-            document.getElementById('choice1').addEventListener('mouseover', function() { loadImage('static/races/human.jpg'); }, false);
-            document.getElementById('choice2').addEventListener('mouseover', function() { loadImage('static/races/elf.jpg'); }, false);
-            document.getElementById('choice3').addEventListener('mouseover', function() { loadImage('static/races/orc.jpg'); }, false);
-            document.getElementById('choice4').addEventListener('mouseover', function() { loadImage('static/races/tiefling.jpg'); }, false);
-            document.getElementById('choice5').addEventListener('mouseover', function() { loadImage('static/races/halfling.jpg'); }, false);
-            document.getElementById('choice6').addEventListener('mouseover', function() { loadImage('static/races/dwarf.jpg'); }, false);
-            document.getElementById('choice7').addEventListener('mouseover', function() { loadImage('static/races/gnoll.jpg'); }, false);
-        }
+            clear_races();
+        };
 
         canvas_codes.c17 = function() {
             // removing race option on hover
-            document.getElementById('choice1').addEventListener('mouseover', function() { loadImage('static/races/human.jpg'); }, false);
-            document.getElementById('choice2').addEventListener('mouseover', function() { loadImage('static/races/elf.jpg'); }, false);
-            document.getElementById('choice3').addEventListener('mouseover', function() { loadImage('static/races/orc.jpg'); }, false);
-            document.getElementById('choice4').addEventListener('mouseover', function() { loadImage('static/races/tiefling.jpg'); }, false);
-            document.getElementById('choice5').addEventListener('mouseover', function() { loadImage('static/races/halfling.jpg'); }, false);
-            document.getElementById('choice6').addEventListener('mouseover', function() { loadImage('static/races/dwarf.jpg'); }, false);
-            document.getElementById('choice7').addEventListener('mouseover', function() { loadImage('static/races/gnoll.jpg'); }, false);
+            clear_races();
+        };
+
+        {
+            let clear_classes = function() {
+                document.getElementById('choice1').removeEventListener('mouseover', function() { loadImage('static/classes/paladin.jpg'); });
+                document.getElementById('choice2').removeEventListener('mouseover', function() { loadImage('static/classes/warlock.jpg'); });
+                document.getElementById('choice3').removeEventListener('mouseover', function() { loadImage('static/classes/bard.jpg'); });
+                document.getElementById('choice4').removeEventListener('mouseover', function() { loadImage('static/classes/assassin.jpg'); });
+            };
+
+            canvas_codes.c1x1 = function() {
+                // paladin
+                clear_classes();
+            };
+
+            canvas_codes.c1x2 = function() {
+                // warlock
+                clear_classes();
+            };
+
+            canvas_codes.c1x3 = function() {
+                // bard
+                clear_classes();
+            };
+
+            canvas_codes.c1x4 = function() {
+                // assassin
+                clear_classes();
+            };
+
+            {
+                canvas_codes.c1xx1 = function() {
+
+                };
+
+                canvas_codes.c1xx2 = function() {
+
+                }
+            }
         }
     }
 };
