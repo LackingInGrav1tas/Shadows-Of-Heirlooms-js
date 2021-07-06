@@ -81,15 +81,16 @@ canvas_codes.c = function() {
     // picking race
     canvas_codes.c1 = function() {
         // changing image to race option on hover
-        document.getElementById('choice1').addEventListener('mouseover', function() { loadImage('static/races/human.jpg'); }, false);
-        document.getElementById('choice2').addEventListener('mouseover', function() { loadImage('static/races/elf.jpg'); }, false);
-        document.getElementById('choice3').addEventListener('mouseover', function() { loadImage('static/races/orc.jpg'); }, false);
-        document.getElementById('choice4').addEventListener('mouseover', function() { loadImage('static/races/tiefling.jpg'); }, false);
-        document.getElementById('choice5').addEventListener('mouseover', function() { loadImage('static/races/halfling.jpg'); }, false);
-        document.getElementById('choice6').addEventListener('mouseover', function() { loadImage('static/races/dwarf.jpg'); }, false);
-        document.getElementById('choice7').addEventListener('mouseover', function() { loadImage('static/races/gnoll.jpg'); }, false);
+        document.getElementById('choice1').addEventListener('mouseover', function() { if (game.history.length == 1) loadImage('static/races/human.jpg'); }, false);
+        document.getElementById('choice2').addEventListener('mouseover', function() { if (game.history.length == 1) loadImage('static/races/elf.jpg'); }, false);
+        document.getElementById('choice3').addEventListener('mouseover', function() { if (game.history.length == 1) loadImage('static/races/orc.jpg'); }, false);
+        document.getElementById('choice4').addEventListener('mouseover', function() { if (game.history.length == 1) loadImage('static/races/tiefling.jpg'); }, false);
+        document.getElementById('choice5').addEventListener('mouseover', function() { if (game.history.length == 1) loadImage('static/races/halfling.jpg'); }, false);
+        document.getElementById('choice6').addEventListener('mouseover', function() { if (game.history.length == 1) loadImage('static/races/dwarf.jpg'); }, false);
+        document.getElementById('choice7').addEventListener('mouseover', function() { if (game.history.length == 1) loadImage('static/races/gnoll.jpg'); }, false);
     }; {
         let clear_races = function() {
+            /*
             document.getElementById('choice1').removeEventListener('mouseover', function() { loadImage('static/races/human.jpg'); });
             document.getElementById('choice2').removeEventListener('mouseover', function() { loadImage('static/races/elf.jpg'); });
             document.getElementById('choice3').removeEventListener('mouseover', function() { loadImage('static/races/orc.jpg'); });
@@ -97,11 +98,12 @@ canvas_codes.c = function() {
             document.getElementById('choice5').removeEventListener('mouseover', function() { loadImage('static/races/halfling.jpg'); });
             document.getElementById('choice6').removeEventListener('mouseover', function() { loadImage('static/races/dwarf.jpg'); });
             document.getElementById('choice7').removeEventListener('mouseover', function() { loadImage('static/races/gnoll.jpg'); });
-        
-            document.getElementById('choice1').addEventListener('mouseover', function() { loadImage('static/classes/paladin.jpg'); }, false);
-            document.getElementById('choice2').addEventListener('mouseover', function() { loadImage('static/classes/warlock.jpg'); }, false);
-            document.getElementById('choice3').addEventListener('mouseover', function() { loadImage('static/classes/bard.jpg'); }, false);
-            document.getElementById('choice4').addEventListener('mouseover', function() { loadImage('static/classes/assassin.jpg'); }, false);
+            */
+
+            document.getElementById('choice1').addEventListener('mouseover', function() { if (game.history.length == 2) loadImage('static/classes/paladin.jpg'); }, false);
+            document.getElementById('choice2').addEventListener('mouseover', function() { if (game.history.length == 2) loadImage('static/classes/warlock.jpg'); }, false);
+            document.getElementById('choice3').addEventListener('mouseover', function() { if (game.history.length == 2) loadImage('static/classes/bard.jpg'); }, false);
+            document.getElementById('choice4').addEventListener('mouseover', function() { if (game.history.length == 2) loadImage('static/classes/assassin.jpg'); }, false);
         };
         canvas_codes.c11 = function() {
             // removing race option on hover
@@ -140,10 +142,13 @@ canvas_codes.c = function() {
 
         {
             let clear_classes = function() {
+                /*
                 document.getElementById('choice1').removeEventListener('mouseover', function() { loadImage('static/classes/paladin.jpg'); });
                 document.getElementById('choice2').removeEventListener('mouseover', function() { loadImage('static/classes/warlock.jpg'); });
                 document.getElementById('choice3').removeEventListener('mouseover', function() { loadImage('static/classes/bard.jpg'); });
                 document.getElementById('choice4').removeEventListener('mouseover', function() { loadImage('static/classes/assassin.jpg'); });
+                */
+                loadImage('static/1.jpg');
             };
 
             canvas_codes.c1x1 = function() {
