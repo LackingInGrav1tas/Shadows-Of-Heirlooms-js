@@ -13,7 +13,10 @@
 <body class="main-body" onload="game.initialize()" id="main-body">
     <center>
         <div class="main-screen" id="main-screen">
-            <canvas class="draw-screen" id="draw-screen" width=250 height=250 onmousedown="mydragg.startMoving(this, 'main-screen', event)" onmouseup='mydragg.stopMoving("main-screen");'></canvas>
+            <div class="draw-screen" id="draw-screen" onmousedown="mydragg.startMoving(this, 'main-screen', event)" onmouseup='mydragg.stopMoving("main-screen");'>
+                <canvas id="canvas-screen" width=250 height=250></canvas>
+                <img id="image">
+            </div>
 
             <p class="description" id="description"></p>
 

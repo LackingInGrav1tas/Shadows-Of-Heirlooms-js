@@ -40,10 +40,17 @@ var mydragg = function(){
     }
 }();
 
+function loadImage(image) {
+    document.getElementById('draw-screen').style.visibility = 'hidden';
+    let elem = document.getElementById('image');
+    elem.src = image;
+    elem.style.visibility = 'visible';
+}
+
 var canvas_codes = {};
 
 canvas_codes.c1 = function() {
-
+    loadImage('static/1.jpg');
 }; {
     canvas_codes.c11 = function() {
 
