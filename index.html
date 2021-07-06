@@ -7,14 +7,16 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<script src="canvascode.js"></script>
 <script src="script.js"></script>
 
-<body class="main-body" onload="game.initialize()">
+<body class="main-body" onload="game.initialize()" id="main-body">
     <center>
-        <div class="main-screen">
-            <p class="description" id="description">
+        <div class="main-screen" id="main-screen">
+            <canvas class="draw-screen" id="draw-screen" width=250 height=250 onmousedown="mydragg.startMoving(this, 'main-screen', event)" onmouseup='mydragg.stopMoving("main-screen");'></canvas>
 
-            </p>
+            <p class="description" id="description"></p>
+
             <div id="options">
                 <p class="choice-text" id="choice1" onmouseover="changeColor('choice1', 'green')" onmouseout="changeColor('choice1', 'white')" onclick="game.selectPath(1)"></p>
                 <p class="choice-text" id="choice2" onmouseover="changeColor('choice2', 'green')" onmouseout="changeColor('choice2', 'white')" onclick="game.selectPath(2)"></p>
@@ -25,8 +27,6 @@
                 <p class="choice-text" id="choice7" onmouseover="changeColor('choice7', 'green')" onmouseout="changeColor('choice7', 'white')" onclick="game.selectPath(7)"></p>
             </div>
         </div>
-        <br>
-        <br>
     </center>
 </body>
 </html>

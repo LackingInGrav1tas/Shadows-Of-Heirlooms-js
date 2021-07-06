@@ -5,6 +5,12 @@ class Player {
 
     user_customization_thing() {
         // when you look into the mirror in the beginning
+
+    }
+
+    encounter(enemies) {
+        // user fights enemies
+        
     }
 }
 
@@ -40,7 +46,7 @@ class Game {
         this.player = new Player();
 
         // the entire game
-        this.current = new StoryFork('START', 'not needed b/c first', function(){console.log(game.current.description)}, [
+        this.current = new StoryFork('START', 'not needed b/c first', canvas_codes.c1, [
             new StoryFork('1', '1111111111111111', function(){}, [
                 new StoryFork('11', '1111111111111111', function(){}, [
         

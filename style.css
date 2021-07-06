@@ -1,15 +1,32 @@
+html {
+    min-height: 100%;
+}
+
 .main-body {
     background-color: darkslategray;
+    min-height: 100%;
 }
 
 .main-screen {
     background-color: black;
     padding-left: 50px;
     padding-right: 50px;
-    padding-top: 0px;
+    padding-top: 5vh;
     color: white;
     border-radius: 20px;
-    white-space: pre-line;
+    min-height: 90vh;
+    text-align: left;
+}
+
+.draw-screen {
+    border: 1px solid white;
+    position: absolute;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;     
+    user-select: none;
 }
 
 .description {
