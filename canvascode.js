@@ -106,38 +106,38 @@ canvas_codes.c = function() {
             document.getElementById('choice4').addEventListener('mouseover', function() { if (game.history.length == 2) loadImage('static/classes/assassin.jpg'); }, false);
         };
         canvas_codes.c11 = function() {
-            // removing race option on hover
             clear_races();
+            game.player.race = 'human';
         };
 
         canvas_codes.c12 = function() {
-            // removing race option on hover
             clear_races();
+            game.player.race = 'elf';
         };
 
         canvas_codes.c13 = function() {
-            // removing race option on hover
             clear_races();
+            game.player.race = 'orc';
         };
 
         canvas_codes.c14 = function() {
-            // removing race option on hover
             clear_races();
+            game.player.race = 'tiefling';
         };
 
         canvas_codes.c15 = function() {
-            // removing race option on hover
             clear_races();
+            game.player.race = 'halfling';
         };
 
         canvas_codes.c16 = function() {
-            // removing race option on hover
             clear_races();
+            game.player.race = 'dwarf';
         };
 
         canvas_codes.c17 = function() {
-            // removing race option on hover
             clear_races();
+            game.player.race = 'gnoll';
         };
 
         {
