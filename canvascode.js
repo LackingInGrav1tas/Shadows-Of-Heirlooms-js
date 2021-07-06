@@ -41,19 +41,30 @@ var mydragg = function(){
 }();
 
 var minimized = false;
+var sizing = [0, 0, ''];
 
 function toggleWindow() {
+    window.alert('not working atm');
+    return;
     let img = document.getElementById('image');
     let elem = document.getElementById('draw-screen');
     minimized = !minimized;
     if (minimized) {
+        sizing[0] = elem.style.width;
+        sizing[1] = elem.style.height;
+        sizing[2] = game.history;
         img.style.display = 'none';
         elem.style.left = 0;
         elem.style.bottom = 0;
     } else {
-        img.style.display = 'inline-block';
+        img.style.display = 'block';
         elem.style.top = 0;
         elem.style.left = 0;
+        if (game.history == sizing[2]) {
+            console.log('resizing');
+            elem.style.width = sizing[0];
+            elem.style.height = sizing[1];
+        }
     }
 }
 

@@ -79,6 +79,8 @@ class Game {
     selectPath(index) {
         // selects option
         this.current = this.current.options[index-1];
+        game.history += index;
+        console.log(game.history);
         this.current.render();
     }
 
