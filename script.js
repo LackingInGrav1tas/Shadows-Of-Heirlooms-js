@@ -1,3 +1,13 @@
+class Player {
+    constructor() {
+
+    }
+
+    user_customization_thing() {
+        // when you look into the mirror in the beginning
+    }
+}
+
 class StoryFork {
     constructor(description, choice_desc, canvas_fun, options) {
         // str, str, function, [str, ...]
@@ -26,8 +36,11 @@ class StoryFork {
 
 class Game {
     constructor() {
+        // player info
+        this.player = new Player();
+
         // the entire game
-        this.current = new StoryFork('START', 'not needed b/c first', function(){}, [
+        this.current = new StoryFork('START', 'not needed b/c first', function(){console.log(game.current.description)}, [
             new StoryFork('1', '1111111111111111', function(){}, [
                 new StoryFork('11', '1111111111111111', function(){}, [
         
@@ -64,7 +77,6 @@ class Game {
     }
 
     initialize() {
-        this.goto('12');
         this.current.render();
     }
 }
