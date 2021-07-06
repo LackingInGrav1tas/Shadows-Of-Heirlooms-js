@@ -46,23 +46,30 @@ class Game {
         this.player = new Player();
 
         // the entire game
-        this.current = new StoryFork('START', 'not needed b/c first', canvas_codes.c1, [
-            new StoryFork('1', '1111111111111111', function(){}, [
-                new StoryFork('11', '1111111111111111', function(){}, [
-        
-                ]),
-                new StoryFork('12', '2222222222222222', function(){}, [
+        this.current = new StoryFork('As you walk down the dark, musty hallway, a room intrigues you. You enter it.\nThick cobwebs fill the corners of the room, and wisps of webbing hang from the ceiling and waver in a wind you can barely feel. One corner of the ceiling has a particularly large clot of webbing within which a goblin\'s bones are tangled.', 'not needed b/c first', canvas_codes.c, [
+            new StoryFork('There is a large mirror. In it you see:', 'Continue', canvas_codes.c1, [
+                new StoryFork('1', 'A Human', canvas_codes.c11, [
                     
                 ]),
-            ]),
-            new StoryFork('2', '2222222222222222', function(){}, [
-                new StoryFork('21', '1111111111111111', function(){}, [
-        
-                ]),
-                new StoryFork('22', '2222222222222222', function(){}, [
+                new StoryFork('2', 'An Elf', canvas_codes.c12, [
                     
                 ]),
-            ]),
+                new StoryFork('3', 'An Orc', canvas_codes.c13, [
+                    
+                ]),
+                new StoryFork('4', 'A Tiefling', canvas_codes.c14, [
+                    
+                ]),
+                new StoryFork('5', 'A Halfling', canvas_codes.c15, [
+                    
+                ]),
+                new StoryFork('6', 'A Dwarf', canvas_codes.c16, [
+                    
+                ]),
+                new StoryFork('7', 'A Gnoll', canvas_codes.c17, [
+                    
+                ]),
+            ])
         ]);
 
         // stores user history (string form)
