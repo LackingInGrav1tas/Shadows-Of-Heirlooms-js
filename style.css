@@ -3,7 +3,7 @@ html {
 }
 
 .main-body {
-    background-color: darkslategray;
+    background-image: url('static/background.jpg');
     min-height: 100%;
 }
 
@@ -21,6 +21,7 @@ html {
 .draw-screen {
     border: 1px solid white;
     position: absolute;
+    background-color:blanchedalmond;
     -webkit-user-select: none;
     -moz-user-select: none;
     -o-user-select: none;
@@ -37,4 +38,14 @@ html {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     block-size: .75em;
+}
+
+.minimize-button {
+    border-radius: 5px;
+    background-color: slategray;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    width: 30px;
+    float: right;
 }

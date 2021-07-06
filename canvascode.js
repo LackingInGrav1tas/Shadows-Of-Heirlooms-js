@@ -40,17 +40,35 @@ var mydragg = function(){
     }
 }();
 
+var minimized = false;
+
+function toggleWindow() {
+    let img = document.getElementById('image');
+    let elem = document.getElementById('draw-screen');
+    minimized = !minimized;
+    if (minimized) {
+        img.style.display = 'none';
+        elem.style.left = 0;
+        elem.style.bottom = 0;
+    } else {
+        img.style.display = 'inline-block';
+        elem.style.top = 0;
+        elem.style.left = 0;
+    }
+}
+
 function loadImage(image) {
     let elem = document.getElementById('image');
     elem.src = image;
-    elem.style.visibility = 'visible';
 }
 
 var canvas_codes = {};
 
 canvas_codes.c = function() {
+    // start
     loadImage('static/1.jpg'); // dungeon
 }; {
+    // picking race
     canvas_codes.c1 = function() {
         // changing image to race option on hover
         document.getElementById('choice1').addEventListener('mouseover', function() { loadImage('static/races/human.jpg'); }, false);
