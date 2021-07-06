@@ -20,21 +20,47 @@ class StoryFork {
     }
 }
 
-var current = new StoryFork('START', 'not needed b/c first', function(){}, [
-    new StoryFork('', '1111111111111111', function(){}, []),
-    new StoryFork('', '2222222222222222', function(){}, []),
-]);
+class Game {
+    constructor() {
+        this.current = new StoryFork('START', 'not needed b/c first', function(){}, [
+            new StoryFork('1', '1111111111111111', function(){}, [
+                new StoryFork('11', '1111111111111111', function(){}, [
+        
+                ]),
+                new StoryFork('12', '2222222222222222', function(){}, [
+                    
+                ]),
+            ]),
+            new StoryFork('2', '2222222222222222', function(){}, [
+                new StoryFork('21', '1111111111111111', function(){}, [
+        
+                ]),
+                new StoryFork('22', '2222222222222222', function(){}, [
+                    
+                ]),
+            ]),
+        ]);
+        this.history = [];
+    }
 
-var history = [];
+    selectPath(index) {
+        this.current = this.current.options[index-1];
+        this.current.render();
+    }
 
-function selectPath(index) {
-    current = current.options[index-1];
-    current.render();
+    goto(from) {
+        for (var i = 0; i < from.length; i++) {
+            this.current = this.current.options[ Number(from[i]) + 1 ];
+        }
+    }
+
+    initialize() {
+        this.goto('12');
+        this.current.render();
+    }
 }
 
-function initialize() {
-    current.render();
-}
+var game = new Game();
 
 /*// hides/shows options
 function toggleOptions() {
