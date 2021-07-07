@@ -180,10 +180,51 @@ canvas_codes.c = function() {
                     // east
                     loadImage('static/c1xx1.jpg');
                 }; {
-                    canvas_codes.c1xx12 = function() {
-                        // village or swamp
-                        loadImage('static/c1xx12.jpg');
+                    canvas_codes.c1xx11 = function() {
+                        // dead - opened sarcophagus
+                        loadImage('static/c1xx11.jpg');
+                        setTimeout(canvas_codes.dead, 1000);
                     };
+                    canvas_codes.c1xx12 = function() {
+                        // diverging
+                        loadImage('static/c1xx12.jpg');
+                    }; {
+                        canvas_codes.c1xx121 = function() {
+                            // inn
+                            loadImage('static/c1xx121.jpg');
+                        }; {
+                            canvas_codes.c1xx1211 = function() {
+                                // investigate
+                                loadImage('static/c1xx1211.jpg');
+                            }; {
+                                canvas_codes.c1xx12111 = function() {
+                                    // running from haltija
+                                    loadImage('static/c1xx1211.jpg');
+                                }; {
+                                    canvas_codes.c1xx121111 = function() {
+                                        // tavern
+                                        loadImage('static/c1xx121111.jpg');
+                                    }; {
+                                        canvas_codes.c1xx1211112 = function() {
+                                            // Stay
+                                            loadImage('static/c1xx1211112.jpg');
+                                        }; {
+                                            canvas_codes.c1xx12111121 = function() {
+                                                // Reason
+
+                                            };
+                                        }
+                                    }
+                                    canvas_codes.c1xx121112 = function() {
+                                        // another building
+                                    }
+                                }
+                            }
+                        }
+                        canvas_codes.c1xx122 = function() {
+
+                        };
+                    }
                 }
 
                 canvas_codes.c1xx2 = function() {
@@ -193,4 +234,13 @@ canvas_codes.c = function() {
             }
         }
     }
+};
+
+canvas_codes.rebel = function() {
+
+};
+
+canvas_codes.dead = function() {
+    // dead
+    loadImage('static/dead.jpg');
 };
