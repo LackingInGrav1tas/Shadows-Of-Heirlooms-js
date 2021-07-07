@@ -41,11 +41,11 @@ var mydragg = function(){
 }();
 
 var minimized = false;
-// var sizing = [0, 0, ''];
+var sizing = [0, 0, ''];
 
 function toggleWindow() {
-    window.alert('unimplemented');
-    /*let img = document.getElementById('image');
+    //window.alert('unimplemented');
+    let img = document.getElementById('image');
     let elem = document.getElementById('draw-screen');
     minimized = !minimized;
     if (minimized) {
@@ -64,7 +64,7 @@ function toggleWindow() {
             elem.style.width = sizing[0];
             elem.style.height = sizing[1];
         }
-    }*/
+    }
 }
 
 function loadImage(image) {
@@ -178,8 +178,13 @@ canvas_codes.c = function() {
             {
                 canvas_codes.c1xx1 = function() {
                     // east
-
-                };
+                    loadImage('static/c1xx1.jpg');
+                }; {
+                    canvas_codes.c1xx12 = function() {
+                        // village or swamp
+                        loadImage('static/c1xx12.jpg');
+                    };
+                }
 
                 canvas_codes.c1xx2 = function() {
                     // north

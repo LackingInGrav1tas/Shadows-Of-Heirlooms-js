@@ -46,11 +46,24 @@ class Game {
         this.player = new Player();
 
         let beginning_message = 'Besides the one you have just entered through, there are two doorways; one to the east, and one to the north. Which door do you enter?';
-        let EAST = new StoryFork('', 'East', canvas_codes.c1xx1, [
-
-        ]);
         let NORTH = new StoryFork('', 'North', canvas_codes.c1xx2, [
 
+        ]);
+        let EAST = new StoryFork('You walk through the east hallway, and you enter a room. This room is a tomb. There is a doorway across from you. Stone sarcophagi stand in five rows of three, each carved with the visage of a warrior lying in state. In their center, one sarcophagus stands taller than the rest. It\'s death mask depicts a minotaur; it\'s face holds an intense look.', 'East', canvas_codes.c1xx1, [
+            new StoryFork('You manage to pry open the sarcophagus. You peer into it, and see the massive figure of the minotaur depicted in the death mask. You see it\'s eyes slowly open, and it is the last sight you see. The minotaur grabs you by your neck, and you struggle to breathe. He lifts you up, with his hand still around your neck, and he swiftly impales you with his horn.', 'Open the Sarcophagus', function(){}, [
+
+            ]),
+            new StoryFork('As you leave the tomb, to hear a creaking sound. You turn, hair standing on end. You see the large sarcophagus laying on the ground, with its lid removed, and a large minotaur with glowing red eyes staring at you. You barely have time to dodge when it charges. You make a dash for the entrance that you came in through. You are in the first room that you came into. Which door do you enter?', 'Go through the doorway', function(){}, [
+                NORTH,
+                new StoryFork('This hallway leads to the outside. You come across a dirt highway, with two diverging paths. You can see a village towards the south and a swamp towards the west. Where do you go?', 'First Door', canvas_codes.c1xx12, [
+                    new StoryFork('', 'South (Village)', canvas_codes.c1xx121, [
+
+                    ]),
+                    new StoryFork('', 'West (Swamp)', canvas_codes.c1xx122, [
+                        
+                    ])
+                ])
+            ]),
         ]);
 
         // the game + setup
