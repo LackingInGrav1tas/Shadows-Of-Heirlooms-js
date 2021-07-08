@@ -217,6 +217,7 @@ canvas_codes.c = function() {
                                     }
                                     canvas_codes.c1xx121112 = function() {
                                         // another building
+                                        loadImage('static/c1xx121112.jpg');
                                     }
                                 }
                             }

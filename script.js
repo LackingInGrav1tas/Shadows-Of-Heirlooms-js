@@ -61,7 +61,7 @@ class Game {
                                         new StoryFork('Bring the Sheriff to the body', "You lead the sheriff outside, and to the body. As you are explaining to the sheriff what happened the haltija shouts, 'They have a gun!' The sheriff turns towards you, and shoots twice without hesitation. You die a swift death.", canvas_codes.dead, [])
                                     ])
                                 ]),
-                                new StoryFork('Enter a different building', '', canvas_codes.c1xx121112, [])
+                                new StoryFork('Enter a different building', 'You furiously bang on a door of an adjacent building. The door opens to a nice looking family. A weird look appears on the child\'s face when he sees the blood on your face. You think that it is fear. You say, please help me! Let me in! They oblige. The father administers first aid to you as the banging on the door from the haltija quiets. The family provides a bed for you. You go to sleep. In the middle of the night, you wake to a weird feeling. You see a pair of glowing red eyes. You turn on the lamp next to you. You see the child. You realise that the look on his face when he saw the blood was that of hunger, not of fear. The eyes are the last pair you see.', canvas_codes.c1xx121112, [])
                             ]),
                             new StoryFork('Confront it', 'You stand your ground, but faster than you can react it leaps on top of you. A few quick slashes with it\'s knife kills you.', canvas_codes.dead, [])
                         ]),
@@ -227,6 +227,9 @@ class Game {
 
     initialize() {
         this.current.render();
+        for (let i = 1; i <= items.slots; i++) {
+            items.lichs_head.load(i);
+        }
     }
 }
 

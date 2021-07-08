@@ -14,7 +14,7 @@ html {
     padding-top: 5vh;
     color: white;
     border-radius: 20px;
-    min-height: 90vh;
+    min-height: 72vh;
     text-align: left;
 }
 
@@ -30,8 +30,30 @@ html {
     user-select: none;
 }
 
-.description {
-    
+#footer {
+    padding-top: 3vh;
+    width: 95%;
+}
+
+.inventory {
+    background-color: darkgray;
+    height: 50;
+}
+
+.item {
+    padding-top: 1vh;
+    padding-left: 1vh;
+    border-width: 3px;
+    border-color: yellow;
+}
+
+#item-spacing {
+    padding-left: 35px;
+}
+
+#item-selection {
+    border-radius: 5px;
+    background-color: honeydew;
 }
 
 .choice-text {

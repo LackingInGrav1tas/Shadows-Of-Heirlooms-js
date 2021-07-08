@@ -7,6 +7,8 @@
     <title>Shadows of Heirlooms</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
+<script src="items.js"></script>
 <script src="canvascode.js"></script>
 <script src="script.js"></script>
 
@@ -33,5 +35,32 @@
             </div>
         </div>
     </center>
+    <footer id="footer">
+        <div class="inventory" id="inventory" onmousedown="if (!minimized) mydragg.startMoving(this, 'main-screen', event)" onmouseup='if (!minimized) mydragg.stopMoving("main-screen");'>
+            <img class="item" id="slot1">
+            <img class="item" id="slot2">
+            <img class="item" id="slot3">
+            <img class="item" id="slot4">
+            <img class="item" id="slot5">
+            <img class="item" id="slot6">
+            <img class="item" id="slot7">
+            <img class="item" id="slot8">
+            <img class="item" id="slot9">
+            <img class="item" id="slot10">
+            <img class="item" id="slot11">
+            <img class="item" id="slot12">
+            <img class="item" id="slot13">
+            <img class="item" id="slot14">
+
+            <a id="item-spacing"></a>
+
+            <select id="item-selection">
+              <option value="equip">Equip</option>
+              <option value="drop">Drop</option>
+              <option value="info">Info</option>
+              <option value="move">Re-Arrange</option>
+            </select>
+        </div>
+    </footer>
 </body>
 </html>
