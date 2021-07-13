@@ -1,3 +1,5 @@
+var mode = 'info';
+
 class Item {
     constructor(title, modifiers, image, info) {
         this.title = title;
@@ -7,18 +9,27 @@ class Item {
         this.proficiency = 0.01;
     }
 
-    load(slot) {
-        let elem = document.getElementById('slot' + slot);
+    onclick() {
+        window.alert(this.title + '\n' + this.info);
+    }
+
+    add() {
+        let elem = document.createElement('img');
         elem.src = this.image;
+        elem.className = "item";
         elem.width = 64;
         elem.height = 64;
+        elem.info = this.info;
+        elem.onclick = this.onclick;
+        let inv = document.getElementById('txt-inventory');
+        inv.insertBefore(elem, document.getElementById('info-button'));
     }
 }
 
 var items = {
     slots: 14,
 
-    blank: new Item('Item Slot', {
+    magic_wand: new Item('Magic Wand', {
         attack_damage: 0,
         ability_power: 0,
         ad_crit_damage: 0,
@@ -30,7 +41,7 @@ var items = {
         mana: 0,
         magic_resist: 0,
         armor: 0,
-    }, 'static/items/blank.jpg', 'Nothing to see here'),
+    }, 'static/items/magic_wand.jpg', 'A magically infused stick'),
     
     broadsword: new Item('Broadsword', {
         attack_damage: 1,

@@ -14,7 +14,7 @@ html {
     padding-top: 5vh;
     color: white;
     border-radius: 20px;
-    min-height: 72vh;
+    min-height: 90vh;
     text-align: left;
 }
 
@@ -30,14 +30,27 @@ html {
     user-select: none;
 }
 
+#txt-inventory {
+    border: 1px solid white;
+    position: absolute;
+    background-color:darkgray;
+    color: black;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;     
+    user-select: none;
+    resize: both;
+    min-width: 90px;
+    min-height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
 #footer {
     padding-top: 3vh;
     width: 95%;
-}
-
-.inventory {
-    background-color: darkgray;
-    height: 50;
 }
 
 .item {
@@ -45,10 +58,6 @@ html {
     padding-left: 1vh;
     border-width: 3px;
     border-color: yellow;
-}
-
-#item-spacing {
-    padding-left: 35px;
 }
 
 #item-selection {
@@ -77,4 +86,8 @@ html {
     padding-bottom: 0;
     padding-left: 0;
     padding-right: 0;
+}
+
+#info-button {
+    border-radius: 0;
 }

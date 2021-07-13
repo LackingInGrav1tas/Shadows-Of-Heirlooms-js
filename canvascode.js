@@ -155,24 +155,28 @@ canvas_codes.c = function() {
                 // paladin
                 clear_classes();
                 game.player.class = 'paladin';
+                game.player.inventory = [items.prayer_amulet, items.broadsword];
             };
 
             canvas_codes.c1x2 = function() {
                 // warlock
                 clear_classes();
                 game.player.class = 'warlock';
+                game.player.inventory = [items.magic_amulet, items.magic_wand];
             };
 
             canvas_codes.c1x3 = function() {
                 // bard
                 clear_classes();
                 game.player.class = 'bard';
+                game.player.inventory = [items.shortsword, items.enchanted_lyre];
             };
 
             canvas_codes.c1x4 = function() {
                 // assassin
                 clear_classes();
                 game.player.class = 'assassin';
+                game.player.inventory = [items.dagger, items.buckler];
             };
 
             {
@@ -211,7 +215,7 @@ canvas_codes.c = function() {
                                         }; {
                                             canvas_codes.c1xx12111121 = function() {
                                                 // Reason
-
+                                                game.player.inventory.push(items.lucky_coin);
                                             };
                                         }
                                     }

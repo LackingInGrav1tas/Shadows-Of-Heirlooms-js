@@ -28,6 +28,7 @@ class StoryFork {
             document.getElementById('choice' + i).style.display = 'none';
         }
         this.canvas_fun();
+        game.render_items();
     }
 }
 
@@ -55,7 +56,6 @@ class Game {
                                     new StoryFork('Attempt to Escape', 'You kick at the man holding your knees, and he drops you. You make a mad dash for the door, just as the door opens and the sheriff opens the door. He opens fire on you, killing you instantly.', canvas_codes.dead, []),
                                     new StoryFork('Stay', "You watch as the sheriff enters the tavern. He asks what is going on here. The gruff man explains. 'Alright', the sheriff says to you. 'Prove you're not guilty.'", canvas_codes.c1xx1211112, [
                                         new StoryFork('Argue your case', "'He killed someone', you say. Once they saw me, they threw their knife at me. Look, he is holding it in it's hand, he must have picked it up. The sheriff does so, and sees the bloodied knife. The sheriff does not need to hear the haltija's argument. He arrests them. You quickly get medical help from a wandering cleric in the tavern. The sheriff gives you his lucky coin as a present.", canvas_codes.c1xx12111121, [
-                                            // inventory later
                                             new StoryFork('Continue', REBEL.description, REBEL.canvas_fun, REBEL.options)
                                         ]),
                                         new StoryFork('Bring the Sheriff to the body', "You lead the sheriff outside, and to the body. As you are explaining to the sheriff what happened the haltija shouts, 'They have a gun!' The sheriff turns towards you, and shoots twice without hesitation. You die a swift death.", canvas_codes.dead, [])
@@ -225,11 +225,19 @@ class Game {
         }
     }
 
+    render_items() {
+        let elements = document.getElementsByClassName("item");
+        while (elements.length > 0) {
+            elements[0].parentNode.removeChild(elements[0]);
+        }
+
+        for (var i = 0; i < this.player.inventory.length; i++) {
+            this.player.inventory[i].add();
+        }
+    }
+
     initialize() {
         this.current.render();
-        for (let i = 1; i <= items.slots; i++) {
-            items.lichs_head.load(i);
-        }
     }
 }
 
